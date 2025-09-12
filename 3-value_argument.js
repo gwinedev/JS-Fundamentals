@@ -3,10 +3,10 @@ let length = 0;
 
 for (length; argv[length]; length++);
 
-if (length == 2) {
+if (length <= 2) {
   console.log("No argument");
 } else {
-  while (argv[length]) {
-    console.log(argv[length]);
-  }
+  const newArgs = argv.slice(2).join(" ");
+
+  console.log(newArgs);
 }
